@@ -13,7 +13,7 @@ public class Word
     {
         if (IsHidden)
         {
-            // Replace the word with underscores or any other placeholder
+            // Replace the word with underscores
             return new string('_', Text.Length);
         }
         return Text;

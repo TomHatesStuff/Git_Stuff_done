@@ -12,10 +12,10 @@ public class Scripture
 
       public void HideWords()
     {
-        // Randomly select words that are not hidden and hide them with a random percentage <= 50%
+        // Randomly select words that are not hidden and hide them with a random percentage <= 20%
         foreach (Word word in words)
         {
-            if (!word.IsHidden && random.Next(101) <= 20) // 50% chance or less
+            if (!word.IsHidden && random.Next(101) <= 20) // 20% chance or less
             {
                 word.Hide();
             }
@@ -23,7 +23,7 @@ public class Scripture
     }
    public string GetRenderedText()
     {
-        // Combine the reference and rendered words to create the full scripture
+        // Combine the reference and rendered words
         return $"{reference.Book} {reference.Chapter}:{reference.StartVerse}-{reference.EndVerse} " +
                string.Join(" ", words.Select(word => word.GetRenderedText()));
     }

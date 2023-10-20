@@ -7,7 +7,7 @@ public class Reference
 
     public Reference(string reference)
     {
-        // Parse and initialize Book, Chapter, StartVerse, and EndVerse from the input reference
+        // Parse and initialize Book, Chapter, StartVerse, and EndVerse from the input 
         string[] parts = reference.Split(' ');
 
         Book = parts[0];
